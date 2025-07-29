@@ -25,11 +25,11 @@ namespace Demo
             }
         
             // Initialize service
-            _addressablesService = new AddressablesService(configuration);
+            _addressablesService = new Addressables.Core.AddressablesService(configuration);
         
             // Subscribe to events
-            _addressablesService.OnLoadProgress += (key, progress) => 
-                Debug.Log($"Loading {key}: {progress:P}");
+            //_addressablesService.OnLoadProgress += (key, progress) => 
+                //Debug.Log($"Loading {key}: {progress:P}");
             
             _addressablesService.OnAssetLoaded += (key, asset) => 
                 Debug.Log($"Loaded: {key}");
